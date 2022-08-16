@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--开启注解支持!-->
+    <context:annotation-config/>
+    <bean id="dog" class="com.boar.pojo.Dog"/>
+    <bean id="dog1" class="com.boar.pojo.Dog"/>
+    <bean id="cat" class="com.boar.pojo.Cat"/>
+    <bean id="user" class="com.boar.pojo.User"></bean>
+<!--byname:会在容器上下文中查找，和自己对象set方法后面的值对应的beanid!-->
+    <!--byname:会在容器上下文中查找，和自己对象属性类型相同的方bean!-->
+<!--    <bean id="user" class="com.boar.pojo.User" autowire="byType">-->
+<!--&lt;!&ndash;        <property name="cat" ref="cat"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="dog" ref="dog"/>&ndash;&gt;-->
+<!--        <property name="str" value="qinjiang"/>-->
+<!--    </bean>-->
+</beans>

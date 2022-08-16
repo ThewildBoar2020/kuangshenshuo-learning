@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--- 赋值 下标赋值-->
+    <!--    <bean id="user" class="com.boar.pojo.User">-->
+    <!--     <constructor-arg index="0" value="小建望"/>-->
+    <!--&lt;!&ndash;    <property name="name" value="建望"></property>&ndash;&gt;-->
+    <!--    </bean>-->
+    <!--- 通过类型创建-->
+    <!--  <bean id="user" class="com.boar.pojo.User">-->
+    <!--      <constructor-arg type="java.lang.String" value="lijianwang"></constructor-arg>-->
+    <!--  </bean>-->
+    <!--直接通过参数名设置-->
+    <bean id="user" class="com.boar.pojo.User">
+        <constructor-arg name="name" value="jianwang"></constructor-arg>
+    </bean>
+    <bean id="userT" class="com.boar.pojo.UserT" name="userT2">
+        <property name="name" value="小野猪"></property>
+    </bean>
+    <!-- name也可以取别名-->
+    <!--    <alias name="user" alias="user2"/>-->
+</beans>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- collaborators and configuration for this bean go here -->
+    <bean id="address" class="com.boar.pojo.Address">
+        <property name="address" value="西安"></property>
+    </bean>
+
+    <bean id="student" class="com.boar.pojo.Student">
+        <!-- 第一种：普通值注入： value-->
+    <property name="name" value="野猪"></property>
+        <!--第二种： bean注入： ref-->
+    <property name="address" ref="address"></property>
+        <!--第三种： 数组注入： ref-->
+        <property name="books" >
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+        <!--第四种： list注入： ref-->
+        <property name="hobbys">
+            <list>
+                <value>听歌</value>
+                <value>爬山</value>
+                <value>看电影</value>
+            </list>
+        </property>
+        <!--第五种： map注入： ref-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="199745452336"></entry>
+                <entry key="银行卡" value="15645642314512"></entry>
+            </map>
+        </property>
+        <!--第六种： set注入： ref-->
+        <property name="games">
+            <set>
+                <value>loc</value>
+                <value>glorty of king</value>
+            </set>
+        </property>
+        <!--第七种： null注入： ref-->
+        <property name="wife"><null/>
+        </property>
+        <!--第七种： properti注入： ref-->
+        <property name="info">
+            <props>
+                <prop key="drive">15662</prop>
+                <prop key="url">男</prop>
+                <prop key="username">李健</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+
+    </bean>
+</beans>
